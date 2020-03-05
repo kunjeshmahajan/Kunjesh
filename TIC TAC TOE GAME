@@ -1,0 +1,160 @@
+from tkinter import *
+from tkinter import messagebox
+root=Tk()
+root.title("Kunjesh tic tac toe #SRM")
+root.geometry("500x500")
+l1=Label(root,text="TIC TAC TOE # Kunjesh",font=('Bold','15'))
+l1.grid(row=0,column=0)
+l2=Label(root,text="P1=X",font=('Bold','15'))
+l2.grid(row=1,column=0)
+l3=Label(root,text="P2=O",fon=('Bold','15'))
+l3.grid(row=2,column=0)
+turn=1
+def c1():
+    global turn
+    if b1["text"]==" ":
+        if turn==1:
+            turn =2
+            b1["text"]="X"
+        elif turn==2:
+            turn=1
+            b1["text"]="O"
+        check()
+def c2():
+    global turn
+    if b2["text"]==" ":
+        if turn==1:
+            turn=2
+            b2["text"]="X"
+        elif turn==2:
+            turn=1
+            b2["text"]="O"
+        check()
+def c3():
+    global turn
+    if b3["text"]==" ":
+        if turn==1:
+            turn=2
+            b3["text"]="X"
+        elif turn==2:
+            turn=1
+            b3["text"]="O"
+        check()
+def c4():
+    global turn
+    if b4["text"]==" ":
+        if turn==1:
+            turn=2
+            b4["text"]="X"
+        elif turn==2:
+            turn=1
+            b4["text"]="O"
+        check()
+def c5():
+    global turn
+    if b5["text"]==" ":
+        if turn==1:
+            turn=2
+            b5["text"]="X"
+        elif turn==2:
+            turn=1
+            b5["text"]="O"
+        check()
+def c6():
+    global turn
+    if b6["text"]==" ":
+        if turn==1:
+            turn=2
+            b6["text"]="X"
+        elif turn==2:
+            turn=1
+            b6["text"]="O"
+        check()
+def c7():
+    global turn
+    if b7["text"]==" ":
+        if turn==1:
+            turn=2
+            b7["text"]="X"
+        elif turn==2:
+            turn=1
+            b7["text"]="O"
+        check()
+def c8():
+    global turn
+    if b8["text"]==" ":
+        if turn==1:
+            turn=2
+            b8["text"]="X"
+        elif turn==2:
+            turn=1
+            b8["text"]="O"
+        check()
+def c9():
+    global turn
+    if b9["text"]==" ":
+        if turn==1:
+            turn=2
+            b9["text"]="X"
+        elif turn==2:
+            turn=1
+            b9["text"]="O"
+        check()
+temp=1
+
+
+def check():
+    global temp
+    k1=b1["text"]
+    k2=b2["text"]
+    k3=b3["text"]
+    k4=b4["text"]
+    k5=b5["text"]
+    k6=b6["text"]
+    k7=b7["text"]
+    k8=b8["text"]
+    k9=b9["text"]
+    temp=temp+1
+    if k1==k2 and k1==k3 and k1=="O" or k1==k2 and k1==k3 and k1=="X":
+        jeet(b1["text"])
+    if k4==k5 and k4==k6 and k4=="O" or k4==k5 and k4==k6 and k4=="X":
+        jeet(b4["text"])
+    if k7==k8 and k7==k9 and k7=="O" or k7==k8 and k7==k9 and k7=="X":
+        jeet(b7["text"])
+    if k1==k4 and k1==k7 and k1=="O" or k1==k4 and k1==k7 and k1=="X":
+        jeet(b1["text"])
+    if k2==k5 and k2==k8 and k2=="O" or k2==k5 and k2==k8 and k2=="X":
+        jeet(b2["text"])
+    if k3==k6 and k3==k9 and k3=="O" or k3==k6 and k3==k9 and k3=="X":
+        jeet(b3["text"])
+    if  k1==k5 and k1==k9 and k1=="O" or k1==k5 and k1==k9 and k1=="X":
+        jeet(b1["text"])
+    if k7==k5 and k7==k3 and k7=="O" or  k7==k5 and k7==k3 and k7=="X":
+        jeet(b7["text"])
+    if flag ==10:
+        messagebox.showinfo("Tie", "Match Tied!!!  Try again :)")
+        root.destroy()
+def jeet(player):
+    ans="oh yeah  " + player + "    jeetgaya    "
+    messagebox.showinfo("congrats   ",ans)
+    root.destroy()
+
+b1=Button(root,text=" ",bg="red",fg="Black",width=4,height=2,font=('Bold','15'),command=c1)
+b1.grid(column=1,row=1)
+b2=Button(root,text=" ",bg="red",fg="Black",width=4,height=2,font=('Bold','15'),command=c2)
+b2.grid(column=2,row=1)
+b3=Button(root,text=" ",bg="red",fg="Black",width=4,height=2,font=('Bold','15'),command=c3)
+b3.grid(column=3,row=1)
+b4=Button(root,text=" ",bg="red",fg="Black",width=4,height=2,font=('Bold','15'),command=c4)
+b4.grid(column=1,row=2)
+b5=Button(root,text=" ",bg="red",fg="Black",width=4,height=2,font=('Bold','15'),command=c5)
+b5.grid(column=2,row=2)
+b6=Button(root,text=" ",bg="red",fg="Black",width=4,height=2,font=('Bold','15'),command=c6)
+b6.grid(column=3,row=2)
+b7=Button(root,text=" ",bg="red",fg="Black",width=4,height=2,font=('Bold','15'),command=c7)
+b7.grid(column=1,row=3)
+b8=Button(root,text=" ",bg="red",fg="Black",width=4,height=2,font=('Bold','15'),command=c8)
+b8.grid(column=2,row=3)
+b9=Button(root,text=" ",bg="red",fg="Black",width=4,height=2,font=('Bold','15'),command=c9)
+b9.grid(column=3,row=3)
+root.mainloop()
